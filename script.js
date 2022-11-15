@@ -92,7 +92,6 @@ function exibirTabela() {
     tabela.innerHTML = elemento;
 }
 
-localStorage.info = JSON.stringify(listaBase);
-localStorage.setItem("listaBaseSerializada", JSON.stringify(listaBase));
+localStorage.removeItem("listaBaseSerializada");
 console.log(localStorage);
 exibirTabela(JSON.parse(localStorage.info));
