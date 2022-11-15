@@ -1,0 +1,200 @@
+<body>
+    <div id="head">
+        <h1 id="title">Irregular verbs</h1>
+        <h4 id="subtitle">A site where you can learn and add verbs.</h4>
+    </div>
+    <div id="container">
+        <div id="sub-container1">
+            <div id="table">
+                <table style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Verb</th>
+                            <th>Simple past</th>
+                            <th>Past participle</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela"></tbody>
+                </table>
+            </div>
+        </div>
+        <div id="sub-container2">
+            <div id="resources">
+                <div class="campo">
+                    <label class="designators" for="verboNovo">New verb</label>
+                    <input class="resources-input" id="verboNovo" name="verboNovo" placeholder="Write here!">
+                </div>
+                <div class="campo">
+                    <label class="designators" for="pastNovo">Simple past of it</label>
+                    <input class="resources-input" id="pastNovo" placeholder="Write here!">
+                </div>
+                <div class="campo">
+                    <label class="designators" for="pastParticipleNovo">Past participle of it</label>
+                    <input class="resources-input" id="pastParticipleNovo" placeholder="Write here!">
+                </div>
+            </div>
+            <div id="buttons">
+                <button class="btn" id="btn-add" onclick="adicionar()">Add</button>
+                <button class="btn" id="btn-remove" onclick="remover()">Remove</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="javascript.js"></script>
+
+<style>
+    body {
+        background: #212529;
+        align-items: center;
+        height: 100%;
+        margin: 0;
+    }
+
+    #container {
+        display: flex;
+        background: #212529;
+        margin: 0;
+    }
+
+    #head {
+        background: linear-gradient(170.65deg, #2a9d8f 27.49%, #264653 83.19%);
+        margin-bottom: 14px;
+        padding: 20px 20px 10px 20px;
+        box-shadow: 0px 0px 7px 3px #0e1d2f;
+    }
+
+    #title {
+        color: white;
+        font-size: 4em;
+        margin: 0;
+    }
+
+    #subtitle {
+        color: white;
+    }
+
+    #sub-container1 {
+        background: #343a40;
+        color: #f6f6f6;
+        display: flex;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+        padding: 10px 15px 10px 15px;
+        box-shadow: 0px 0px 7px 3px #0e1d2f;
+        border-radius: 2px;
+        border-color: #0e1d2f;
+    }
+
+    #sub-container2 {
+        background: #343a40;
+        color: #f6f6f6;
+        height: 100%;
+        width: 50%;
+        text-align: center;
+        justify-content: center;
+        box-shadow: 0px 0px 7px 3px #0e1d2f;
+        border-radius: 2px;
+    }
+
+    .campo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .resources-input {
+        padding: 2px;
+        margin: 3px;
+    }
+
+    .resources-input:hover {
+        animation: horizontal;
+        transition: all 0.3s;
+        padding: 2px 5px 2px 5px;
+    }
+
+    #table {
+        padding: 40px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #resources {
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-bottom: 0px;
+        margin-left: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: row-resize;
+        justify-content: center;
+    }
+
+    #buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 10px;
+        margin-top: 0px;
+    }
+
+    .btn {
+        margin-top: 20px;
+        margin-right: 20px;
+        padding: 10px 20px 10px 20px;
+        font-size: 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        color: white;
+        font-weight: 500;
+        letter-spacing: 2px;
+        transition: 0.5s;
+        display: inline-block;
+        min-width: 140px;
+    }
+
+    .btn:hover {
+        letter-spacing: 5px;
+        padding: 13px 23px 13px 23px;
+        color: black;
+        background-color: #0096c7;
+    }
+
+    #btn-add:hover {
+        background-color: #0096c7;
+    }
+
+    #btn-remove:hover {
+        background-color: #d00000;
+    }
+
+    #btn-add {
+        background-color: #023e7d;
+        border-color: #0353a4;
+    }
+
+    #btn-remove {
+        background-color: #6a040f;
+        border-color: #9d0208;
+        cursor: pointer;
+    }
+
+    tr,
+    td,
+    th {
+        color: white;
+        outline: 0.5px solid white;
+        padding: 7px 14px 7px 14px;
+    }
+
+    table {
+        position: center;
+        text-align: center;
+    }
+</style>
