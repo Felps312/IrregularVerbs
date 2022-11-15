@@ -65,7 +65,6 @@ function adicionar() {
     localStorage.info = listaSerializada;
 
     atualizarTabela(lista);
-    console.log(localStorage);
 }
 
 function remover() {
@@ -76,7 +75,6 @@ function remover() {
     localStorage.info = listaSerializada;
 
     atualizarTabela(lista);
-    console.log(localStorage);
 }
 
 function exibirTabela() {
