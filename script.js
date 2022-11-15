@@ -92,6 +92,4 @@ function exibirTabela() {
     tabela.innerHTML = elemento;
 }
 
-localStorage.removeItem("listaBaseSerializada");
-console.log(localStorage);
 exibirTabela(JSON.parse(localStorage.info));
