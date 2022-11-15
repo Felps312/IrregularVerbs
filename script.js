@@ -93,5 +93,6 @@ function exibirTabela() {
 }
 
 localStorage.info = JSON.stringify(listaBase);
+localStorage.setItem("listaBaseSerializada", JSON.stringify(listaBase));
 console.log(localStorage);
 exibirTabela(JSON.parse(localStorage.info));
