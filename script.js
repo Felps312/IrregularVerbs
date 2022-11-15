@@ -92,6 +92,6 @@ function exibirTabela() {
     tabela.innerHTML = elemento;
 }
 
-//localStorage.info = JSON.stringify(listaBase);
+localStorage.info = JSON.stringify(listaBase);
 console.log(localStorage);
 exibirTabela(JSON.parse(localStorage.info));
